@@ -5124,6 +5124,13 @@ form > label {
 }
 
 
+.mobile-bottom-nav {
+
+    display: none;
+
+}
+
+
 @media(
     max-width: 760px
 ) {
@@ -5143,11 +5150,99 @@ form > label {
     }
 
 
+    .mobile-bottom-nav {
+
+        display: flex;
+
+        position: fixed;
+
+        bottom: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 200;
+
+        padding:
+            8px
+            0
+            env(safe-area-inset-bottom, 8px);
+
+        justify-content: space-around;
+
+        align-items: center;
+
+        border-top:
+            1px solid
+            var(--line);
+
+        background:
+            rgba(247, 240, 223, .95);
+
+        backdrop-filter:
+            blur(14px);
+
+    }
+
+
+    .mobile-bottom-nav a,
+    .mobile-bottom-nav button {
+
+        flex: 1;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        gap: 3px;
+
+        padding:
+            6px
+            4px;
+
+        border: none;
+
+        background: none;
+
+        color:
+            #7a7469;
+
+        font-size: 10px;
+
+        font-weight: 600;
+
+        cursor: pointer;
+
+        transition:
+            .2s;
+
+    }
+
+
+    .mobile-bottom-nav a.active,
+    .mobile-bottom-nav a:hover,
+    .mobile-bottom-nav button:hover {
+
+        color:
+            var(--olive-dark);
+
+    }
+
+
+    .mobile-bottom-nav a.active {
+
+        font-weight: 700;
+
+    }
+
+
     .feed-column,
     .wide-page {
 
-        padding:
-            18px;
+        padding: 18px;
+
+        padding-bottom: 80px;
 
     }
 
